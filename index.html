@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Judul Halaman (Nama Mahasiswa) -->
+    <title>Dani Firmansah</title>
+    <style>
+        /* Elemen Desain: Warna background & warna teks */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8; /* Elemen desain: Warna background */
+            color: #333333;            /* Elemen desain: Warna teks */
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: #ffffff;
+            max-width: 650px;
+            width: 100%;
+            padding: 35px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            border-top: 5px solid #2563eb;
+        }
+
+        /* 1 Heading */
+        h1 {
+            color: #1e3a8a;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 26px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 12px;
+        }
+
+        /* 3 Paragraf */
+        p {
+            font-size: 16px;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        /* Tombol interaksi */
+        button {
+            background-color: #2563eb;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+
+        button:hover {
+            background-color: #1e40af;
+        }
+
+        #waktu {
+            margin-top: 14px;
+            margin-bottom: 0;
+            font-weight: bold;
+            color: #1e3a8a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 1 Heading -->
+        <h1>Dani Firmansah</h1>
+
+        <!-- 3 Paragraf -->
+        <p>
+            Halo! Perkenalkan nama saya <strong>Dani Firmansah</strong> dengan NIM <strong>25552011151</strong>, biasa dipanggil <strong>Dani</strong>. Saat ini saya adalah seorang mahasiswa yang sedang menempuh mata kuliah Pemrograman Web 1. Halaman web ini dibuat sebagai bentuk pemenuhan tugas praktikum web dasar.
+        </p>
+
+        <p>
+            Dalam mata kuliah ini, saya mempelajari bagaimana cara menyusun struktur halaman web yang baik menggunakan HTML, seperti penentuan judul halaman, hierarki penulisan heading, serta pembagian konten ke dalam paragraf yang informatif dan terstruktur.
+        </p>
+
+        <p>
+            Selain struktur HTML, saya juga menerapkan styling dasar menggunakan CSS untuk meningkatkan tampilan estetika halaman, di antaranya dengan memberikan warna latar belakang (background) yang nyaman dipandang serta pengaturan warna teks (color) agar mudah dibaca.
+        </p>
+
+        <!-- Interaksi JavaScript: tombol menampilkan tanggal & jam -->
+        <button onclick="tampilkanWaktu()">Tampilkan Tanggal &amp; Jam</button>
+        <p id="waktu">Klik tombol di atas untuk melihat tanggal dan jam saat ini.</p>
+    </div>
+
+    <script>
+        function tampilkanWaktu() {
+            const sekarang = new Date();
+            const tanggal = sekarang.toLocaleDateString('id-ID', {
+                weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
+            });
+            const jam = sekarang.toLocaleTimeString('id-ID');
+            document.getElementById('waktu').textContent =
+                'Sekarang: ' + tanggal + ', pukul ' + jam;
+        }
+    </script>
+
+</body>
+</html>
